@@ -8,7 +8,7 @@ The syntax is:
 
     $ ytdl URL [max Height]
 
-Example:
+### Example:
 
 The following command will download best qualtiy of the video with ID of 11111111111 with maximum 360px height:
 
