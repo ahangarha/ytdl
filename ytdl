@@ -1,0 +1,30 @@
+#! /bin/bash
+#
+# This is a script to make it easier for me to use youtube-dl
+# written by S.Mostafa Ahangarha
+#
+# This script needs two argument:
+#   1. URL to youtube video or playlist or...
+#   2. quality (optional)
+
+
+
+url=$1
+arg=$2
+
+if [ -z $url ]; then
+	echo "No URL !!!"
+	exit 1
+fi
+
+quality=''
+
+if [ -n $arg ]; then
+	quality="--format best[height<=$arg]"
+	
+fi
+
+youtube-dl $quality $url
+
+
+# vim: syntax=sh ts=4 sw=4 sts=4 sr noet
